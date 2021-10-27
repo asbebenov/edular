@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('mypage',['nametable'=>'Крутая табличка']);
+    return view('start');
 });
-Route::get('/err', function () {
-    return view('errpage');
+
+Route::get('/page/{id}',function($id){
+    return view('page',['id'=>$id]);
 });
