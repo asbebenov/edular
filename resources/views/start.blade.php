@@ -42,6 +42,7 @@
   </div>
 
   <!-- ======= Header ======= -->
+  <section id="main">
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
@@ -51,25 +52,28 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="#hero">Новости</a></li>
-          <li><a class="nav-link scrollto" href="page/mis">МИС НСО</a></li>
-          <li><a class="nav-link scrollto" href="#services">МИС ФХД</a></li>
-          <li><a class="nav-link scrollto" href="#departments">Приказы/Инструкции</a></li>
-          <li><a class="nav-link scrollto" href="#doctors">Телемедицина</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Регистратура</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Бланки</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Видео</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Кадры</a></li>
-          <li><a class="nav-link scrollto" href="#contact">О сайте</a></li>
+          <li><a class="nav-link scrollto " href="{{url('page/news')}}">Новости</a></li>
+          <li><a class="nav-link scrollto" href="{{url('page/mis')}}">МИС НСО</a></li>
+          <li><a class="nav-link scrollto" href="{{url('page/eln')}}">ЭЛН</a></li>
+            <li><a class="nav-link scrollto" href="{{url('page/poly')}}">Поликлиника</a></li>
+          <li><a class="nav-link scrollto" href="{{url('page/prikaz')}}">Приказы/Инструкции</a></li>
+            <li><a class="nav-link scrollto" href="{{url('page/blank')}}">Бланки</a></li>
+            <li><a class="nav-link scrollto" href="{{url('page/video')}}">Видео</a></li>
+          <li><a class="nav-link scrollto" href="{{url('page/telemed')}}">Телемедицина</a></li>
+          <li><a class="nav-link scrollto" href="{{url('page/kadr')}}">Кадры</a></li>
+          <li><a class="nav-link scrollto" href="{{url('page/about')}}">О сайте</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
     </div>
   </header>
+  </section>
   <!-- End Header -->
-  <div class="container">
+  <section id="hero">
+  <div class=container>
       @yield('content')
   </div>
+  </section>
 </body>
 
 </html>

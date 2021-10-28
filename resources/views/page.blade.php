@@ -1,6 +1,25 @@
 @extends("start")
 
 @section('content')
-    <p>Тут чего-то должно быть, например</p> {{$id}}
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>
+                Список документов
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+    @foreach($docs as $doc)
+
+        <tr>
+            <td>
+                <a href={{$doc->doc}}>{{$doc->name}}</a>
+            </td>
+
+        </tr>
+    @endforeach
+        </tbody>
+    </table>
 @endsection
 

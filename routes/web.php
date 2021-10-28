@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('start');
 });
-
+/*
 Route::get('/page/{id}',function($id){
     return view('page',['id'=>$id]);
 });
+*/
+Route::get('page/{id}',[App\Http\Controllers\ContMisController::class,'makedata']);
