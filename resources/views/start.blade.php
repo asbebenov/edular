@@ -24,10 +24,7 @@
     <link href="{{ asset('css/glightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/swiper-bundle.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <script src="{{ asset('js/jquery-3.6.0.min.js')}}" type="text/javascript" ></script>
-    <script src="{{ asset('js/app.js')}}" type="text/javascript" ></script>
-    <script src="{{ asset('js/main.js')}}" type="text/javascript" ></script>
-    <script src="{{ asset('js/myengine.js')}}" type="text/javascript" ></script>
+
 
 </head>
 
@@ -75,6 +72,11 @@
       @yield('content')
   </div>
   </section>
+  <script src="{{ asset('js/jquery-3.6.0.min.js')}}" type="text/javascript" ></script>
+  <script src="{{ asset('js/app.js')}}" type="text/javascript" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script src="{{ asset('js/main.js')}}" type="text/javascript" ></script>
+  <script src="{{ asset('js/myengine.js')}}" type="text/javascript" ></script>
 </body>
 
 </html>
