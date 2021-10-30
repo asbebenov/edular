@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersTable extends Migration
+class MisDocs extends Migration
 {
     /**
      * Run the migrations.
@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('doc',100);
             $table->string('razdel',10);
             $table->timestamps();
-            
+
         });
     }
 
@@ -30,6 +30,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mis_doc');
+        //
     }
 }
