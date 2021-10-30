@@ -2,7 +2,7 @@
 
 @section('content')
     <table class="table table-bordered">
-        <thead>
+        <thead class="table-dark">
         <tr>
             <th>
                 Список документов

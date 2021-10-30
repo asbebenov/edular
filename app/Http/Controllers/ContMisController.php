@@ -11,10 +11,12 @@ class ContMisController extends Controller
 {
  public function makedata($id){
 
-//      $req = 'select * from '.$id.';';
-    //  $res = DB::connection('mysql')->select($req);
-        $res = MisDoc::all();
-
-      return view('page', ['docs' => $res]);
+       // $res = MisDoc::all();
+          $res = MisDoc::where('razdel',$id)->get();
+          if($id=='video'){
+              return view('video', ['docs' => $res]);
+          }else {
+              return view('page', ['docs' => $res]);
+          }
   }
 }

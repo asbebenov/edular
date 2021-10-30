@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('name',100);
             $table->string('doc',100);
+            $table->string('razdel',10);
             $table->timestamps();
         });
     }
