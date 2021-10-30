@@ -14,9 +14,11 @@
 
             <tr>
                 <td>
+                    <p> {{$doc->name}} </p>
                     <video  width="720" height="540" controls preload="auto">
-                        <source src="{{URL::asset($doc->doc)}}" type="video/webm">
+                        <source src="{{$doc->doc}}" type="video/webm">
                     </video>
+
                 </td>
 
             </tr>

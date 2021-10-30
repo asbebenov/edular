@@ -13,7 +13,7 @@ class ContMisController extends Controller
 
        // $res = MisDoc::all();
           $res = MisDoc::where('razdel',$id)->get();
-          if($id=='video'){
+          if($id=='video' || $id == 'telemed'){
               return view('video', ['docs' => $res]);
           }else {
               return view('page', ['docs' => $res]);
