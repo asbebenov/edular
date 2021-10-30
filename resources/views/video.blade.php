@@ -19,7 +19,7 @@
                         <source src="{{$doc->doc}}" type="video/webm">
                     </video>
                 -->
-                    <button class="btn btn-link" onclick=playvideo('{{$doc->doc}}')>{{$doc->name}}</button>
+                    <button class="btn btn-link" onclick="playvideo('{{$doc->doc}}')">{{$doc->name}}</button>
                 </td>
             </tr>
         @endforeach
