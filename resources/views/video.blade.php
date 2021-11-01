@@ -14,11 +14,11 @@
 
             <tr>
                 <td>
-                <!--
-                    <video  width="800" height="450" controls preload="auto">
+<!--
+                    <video onclick=playvideo('450') width="800" height="150" controls preload="auto">
                         <source src="{{$doc->doc}}" type="video/webm">
                     </video>
-                -->
+-->
                     <button class="btn btn-link" onclick="playvideo('{{$doc->doc}}')">{{$doc->name}}</button>
                 </td>
             </tr>
@@ -27,13 +27,12 @@
         </tbody>
     </table>
 @endsection
+
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
-            <div class="modal-body">
-                <video  width="800" height="450" controls preload="auto">
-                    <source src="" type="video/webm">
-                </video>
+            <div id="mbody" class="modal-body">
+                <iframe width='800' height='450' allowfullscreen ></iframe>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
@@ -41,3 +40,4 @@
         </div>
     </div>
 </div>
+

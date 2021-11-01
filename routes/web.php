@@ -22,4 +22,4 @@ Route::get('/page/{id}',function($id){
 });
 */
 Route::get('page/{id}',[App\Http\Controllers\ContMisController::class,'makedata']);
-Route::get('/video', function () {return view('video');});
+Route::get('/kadr/{id}',[App\Http\Controllers\OkController::class,'showOkFiles']);

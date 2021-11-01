@@ -58,7 +58,7 @@
             <li><a class="nav-link scrollto" href="{{url('page/blank')}}">Бланки</a></li>
             <li><a class="nav-link scrollto" href="{{url('page/video')}}">Видео</a></li>
           <li><a class="nav-link scrollto" href="{{url('page/telemed')}}">Телемедицина</a></li>
-          <li><a class="nav-link scrollto" href="{{url('page/kadr')}}">Кадры</a></li>
+          <li><a class="nav-link scrollto" href="{{url('kadr/ok')}}">Кадры</a></li>
           <li><a class="nav-link scrollto" href="{{url('page/about')}}">О сайте</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
