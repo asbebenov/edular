@@ -22,4 +22,13 @@ Route::get('/page/{id}',function($id){
 });
 */
 Route::get('page/{id}',[App\Http\Controllers\ContMisController::class,'makedata']);
-Route::get('/kadr/{id}',[App\Http\Controllers\OkController::class,'showOkFiles']);
+Route::get('kadr',[App\Http\Controllers\OkController::class,'showOkFiles']);
+Route::get('auth', function () {return view('auth/auth');});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

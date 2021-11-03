@@ -44,7 +44,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <a href="/" class="logo me-auto"><img src="asset{{'img/logo.png'}}" alt=""></a>
+      <a href="login" class="logo me-auto"><img src="{{ url('storage/img/heart.png') }}" alt="" /></a>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <h1 class="logo me-auto"><a href="index.html">Medicio</a></h1> -->
 
@@ -58,7 +58,7 @@
             <li><a class="nav-link scrollto" href="{{url('page/blank')}}">Бланки</a></li>
             <li><a class="nav-link scrollto" href="{{url('page/video')}}">Видео</a></li>
           <li><a class="nav-link scrollto" href="{{url('page/telemed')}}">Телемедицина</a></li>
-          <li><a class="nav-link scrollto" href="{{url('kadr/ok')}}">Кадры</a></li>
+          <li><a class="nav-link scrollto" href="{{url('kadr/?id=ok')}}">Кадры</a></li>
           <li><a class="nav-link scrollto" href="{{url('page/about')}}">О сайте</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -77,6 +77,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   <script src="{{ asset('js/main.js')}}" type="text/javascript" ></script>
   <script src="{{ asset('js/myengine.js')}}" type="text/javascript" ></script>
+
 </body>
 
 </html>
