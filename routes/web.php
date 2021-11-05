@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('start');
+    return view('idx');
 });
 /*
 Route::get('/page/{id}',function($id){
@@ -23,8 +24,10 @@ Route::get('/page/{id}',function($id){
 */
 Route::get('page/{id}',[App\Http\Controllers\ContMisController::class,'makedata']);
 Route::get('kadr',[App\Http\Controllers\OkController::class,'showOkFiles']);
-Route::get('auth', function () {return view('auth/auth');});
-
+Route::get('pc',[App\Http\Controllers\ListPcController::class,'makepclist'])->middleware('auth');
+Route::get('pctable',function(){
+    return view('pctable');
+})->middleware('auth');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

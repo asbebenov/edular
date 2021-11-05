@@ -1,5 +1,9 @@
 @extends("start")
 
+@section('divtype')
+    "container"
+@endsection
+
 @section('content')
     <table class="table table-bordered">
         <thead class="table-dark">

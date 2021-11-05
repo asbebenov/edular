@@ -1,5 +1,9 @@
 @extends("start")
 
+@section('divtype')
+    "container"
+@endsection
+
 @section('content')
     <table class="table table-bordered">
         <thead class="table-dark">
@@ -10,6 +14,11 @@
         </tr>
         </thead>
         <tbody>
+        @if( $id==='telemed')
+            <tr><td><a href="https://tmc.egisz.rosminzdrav.ru/">ФЕДЕРАЛЬНАЯ ТЕЛЕМЕДИЦИНСКАЯ СИСТЕМА</a></td></tr>
+            <tr><td><a href="/storage/telemed/ТМК_ФЭР_Руководство_пользователя_Врач.pdf">«ФЕДЕРАЛЬНАЯ ЭЛЕКТРОННАЯ РЕГИСТРАТУРА» Руководство врача</a></td></tr>
+            <tr><td><a href="/storage/telemed/letter804.pdf">Письмо МЗ № 804 О телемедицинских консультациях</a></td></tr>
+        @endif
         @foreach($docs as $doc)
 
             <tr>

@@ -16,8 +16,8 @@ class MisDocs extends Migration
         if (!(Schema::hasTable('mis_docs'))) {
             Schema::create('mis_docs', function (Blueprint $table) {
                 $table->increments('id');
-                $table->string('name', 100);
-                $table->string('doc', 100);
+                $table->string('name', 200);
+                $table->string('doc', 200);
                 $table->string('razdel', 10);
                 $table->timestamps();
 
