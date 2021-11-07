@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div align="center"  class="navbar navbar-expand navbar-expand-lg bg-primary">
+    <div align="center"  class="navbar  bg-primary">
         <div class="container" >
             <div class="mtb-2 text-dark row">
                 <div class="col-auto">
@@ -51,7 +51,7 @@
                             <option value="all">Все</option>
                         </select>
                     </div>
-
+                    <input type="button" id="iplist" class="btn btn-warning btn-sm" value="Свободные IP">
                 </div>
             </div>
         </div>

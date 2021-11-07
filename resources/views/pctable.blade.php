@@ -1,5 +1,8 @@
 @if(empty($tab))
-    <h1>Почему-то ничего не нашли</h1>>
+    <table class="table table-bordered table-danger">
+        <tr><th>Ошибка!</th></tr>
+        <tr><td>Ничего не нашли. Проверьте номер/IP. И что ПК уже не списан</td></tr>
+    </table>
 @endif
 @if(isset($tab))
     <table class="table table-bordered">

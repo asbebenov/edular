@@ -44,7 +44,7 @@
                 <iframe width='800' height='450' allowfullscreen ></iframe>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <button type="button" onclick="stopvideo()" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
             </div>
         </div>
     </div>

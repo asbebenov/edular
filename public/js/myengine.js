@@ -24,3 +24,8 @@
     myModal.show();
 }
 
+function stopvideo(){
+    $('.modal-body').find('iframe').attr('src',"")
+}
+
+

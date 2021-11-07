@@ -9,7 +9,7 @@
   <title>Внутренний сайт ГКБ №34</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
   <!-- Favicons -->
   <link href="asset{{'img/favicon.png'}}" rel="icon">
 
@@ -61,7 +61,7 @@
             <li><a class="nav-link scrollto" href="{{url('page/video')}}">Видео</a></li>
           <li><a class="nav-link scrollto" href="{{url('page/telemed')}}">Телемедицина</a></li>
           <li><a class="nav-link scrollto" href="{{url('kadr/?id=ok')}}">Кадры</a></li>
-          <li><a class="nav-link scrollto" href="{{url('page/about')}}">О сайте</a></li>
+          <li><a class="nav-link scrollto" href="{{url('about')}}">О сайте</a></li>
         </ul>
       </nav><!-- .navbar -->
     </div>
@@ -73,8 +73,8 @@
             </a>
 
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="pc">Список ПК</a></li>
-                <li><a class="dropdown-item" href="#">Журнал перемещений</a></li>
+                <li><a class="dropdown-item" href="/pc">Список ПК</a></li>
+                <li><a class="dropdown-item" href="/move">Журнал перемещений</a></li>
                 <li><a class="dropdown-item" href="#">Админка сайта</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="javascript:void 0" onclick="$('#logout-form').submit();">Выход</a></li>
