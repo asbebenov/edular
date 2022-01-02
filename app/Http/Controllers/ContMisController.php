@@ -11,8 +11,6 @@ use Illuminate\Support\Facades\DB;
 class ContMisController extends Controller
 {
  public function makedata($id){
-    // Storage::disk('public')->put('ok/example.txt', 'dsadsadsadsa');
-       // $res = MisDoc::all();
 
           $res = MisDoc::where('razdel',$id)->get();
           if($id=='video' || $id == 'telemed'){
@@ -20,5 +18,8 @@ class ContMisController extends Controller
           }else {
               return view('page', ['docs' => $res, 'id'=>$id]);
           }
+  }
+  public function deldata($id){
+
   }
 }

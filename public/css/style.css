@@ -14,13 +14,15 @@ body {
 }
 
 a {
-  color: #3fbbc0;
+  color: #2320d6;
   text-decoration: none;
 }
 
 a:hover {
-  color: #65c9cd;
-  text-decoration: none;
+  color: #2320d6; /* Меняем цвет текста */
+  -webkit-text-shadow: 2px 2px 2px #000;
+  -moz-text-shadow: 2px 2px 2px #000;
+      text-shadow: 2px 2px 2px #000;
 }
 
 h1, h2, h3, h4, h5, h6 {

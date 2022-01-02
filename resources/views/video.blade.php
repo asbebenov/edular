@@ -23,11 +23,7 @@
 
             <tr>
                 <td>
-<!--
-                    <video onclick=playvideo('450') width="800" height="150" controls preload="auto">
-                        <source src="{{$doc->doc}}" type="video/webm">
-                    </video>
--->
+
                     <button class="btn btn-link" onclick="playvideo('{{$doc->doc}}')">{{$doc->name}}</button>
                 </td>
             </tr>

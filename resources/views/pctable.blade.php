@@ -1,10 +1,9 @@
-@if(empty($tab))
+@if($tab->isEmpty())
     <table class="table table-bordered table-danger">
         <tr><th>Ошибка!</th></tr>
         <tr><td>Ничего не нашли. Проверьте номер/IP. И что ПК уже не списан</td></tr>
     </table>
-@endif
-@if(isset($tab))
+@else
     <table class="table table-bordered">
         <thead class="table-dark">
         <tr>

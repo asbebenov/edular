@@ -6,10 +6,10 @@
 
 @section('content')
     <div align="center"  class="navbar  bg-primary">
-        <div class="container" >
+        <div class="container"  style="margin-top: 10px; margin-bottom: 10px;">
             <div class="mtb-2 text-dark row">
                 <div class="col-auto">
-                    <form method="post" class="row g-3">
+                    <form method="get" id="formpc" class="row g-3">
 
                         <div class="col-auto">
                             <label for="inv" class="form-label">Инв. номер</label>

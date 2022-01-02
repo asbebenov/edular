@@ -25,7 +25,7 @@
     <link href="{{ asset('css/glightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/swiper-bundle.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('css/time.css') }}" rel="stylesheet">
 
 </head>
 
@@ -35,7 +35,7 @@
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
       <div class="d-flex align-items-center">
-        <i class="bi bi-phone"></i> Отдел компьютерного обеспечения Тел. 354-60-24 вн. 333
+        <i class="bi bi-phone"></i> Отдел компьютерного обеспечения Тел. 354-64-20 вн. 333
       </div>
     </div>
   </div>
@@ -46,13 +46,13 @@
 
       <div class="container d-flex align-items-center">
 
-          <a href="/login" class="logo me-auto"><img src="{{ url('storage/img/heart.png') }}" alt="" /></a>
+<div class="row"> <a href="/login" class="logo me-auto"><img src="{{ url('storage/img/heart.png') }}" alt="" /></a> </div>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <h1 class="logo me-auto"><a href="index.html">Medicio</a></h1> -->
     <div class="row">
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="{{url('page/news')}}">Новости</a></li>
+
           <li><a class="nav-link scrollto" href="{{url('page/mis')}}">МИС НСО</a></li>
           <li><a class="nav-link scrollto" href="{{url('page/eln')}}">ЭЛН</a></li>
             <li><a class="nav-link scrollto" href="{{url('page/poly')}}">Поликлиника</a></li>
@@ -61,9 +61,13 @@
             <li><a class="nav-link scrollto" href="{{url('page/video')}}">Видео</a></li>
           <li><a class="nav-link scrollto" href="{{url('page/telemed')}}">Телемедицина</a></li>
           <li><a class="nav-link scrollto" href="{{url('kadr/?id=ok')}}">Кадры</a></li>
+          <li><a class="nav-link scrollto " href="{{url('apt/?id=apt')}}">Аптека</a></li>
           <li><a class="nav-link scrollto" href="{{url('about')}}">О сайте</a></li>
+	  <li><div id="time" class="glow"></div></li>
         </ul>
+
       </nav><!-- .navbar -->
+
     </div>
     @if(\Illuminate\Support\Facades\Auth::check())
     <div class="row ml-5">
@@ -75,7 +79,7 @@
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <li><a class="dropdown-item" href="/pc">Список ПК</a></li>
                 <li><a class="dropdown-item" href="/move">Журнал перемещений</a></li>
-                <li><a class="dropdown-item" href="#">Админка сайта</a></li>
+                <li><a class="dropdown-item" href="/adm">Админка сайта</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="javascript:void 0" onclick="$('#logout-form').submit();">Выход</a></li>
             </ul>
