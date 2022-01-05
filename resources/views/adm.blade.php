@@ -6,8 +6,8 @@
 @endsection
 
 @section("content")
-    <table align="center">
-        <thead>
+    <table class="table table-info table-borderless">
+        <thead class="table-dark">
             <tr>
                 <th colspan="3">
                    АРМ Контент-менеджера

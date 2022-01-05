@@ -23,6 +23,7 @@ class ListPcs extends Migration
                 $table->string('pom',100);
                 $table->string('kab',100);
                 $table->string('pc',100);
+                $table->string('doctor',70);
                 $table->string('ip',100);
                 $table->string('mac',100);
                 $table->string('os',100);

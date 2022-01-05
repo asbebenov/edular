@@ -17,11 +17,9 @@ class AdmController extends Controller {
         $file = $form_data->file('uplfile');
         $path = $form_data->file('uplfile')->storeAs('public/'.$vol, $file->getClientOriginalName());
         $sitepath = Storage::get($path);
-        echo $sitepath;
-        die('ok');
         $mdb = new MisDoc();
         $mdb->name=$str;
-        $mdb->doc='storage/'.$vol.'/'.$file->getClientOriginalName();
+        $mdb->doc='/storage/'.$vol.'/'.$file->getClientOriginalName();
         $mdb->razdel=$vol;
         $mdb->save();
     }

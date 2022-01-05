@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('page/{id}',[App\Http\Controllers\ContMisController::class,'makedata']);
-Route::delete('delete_doc_row',[App\Http\Controllers\DelrowController::class,'deldata'])->middleware('auth');
+Route::delete('/delete_doc_row',[App\Http\Controllers\DelrowController::class,'deldata'])->middleware('auth');
 Route::get('/about', function (){
     return view('about');
 });

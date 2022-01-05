@@ -14,12 +14,14 @@
             <th>Помещение</th>
             <th>Кабинет</th>
             <th>Имя ПК</th>
+            <th>Врач</th>
             <th>IP</th>
             <th>МАС адрес</th>
             <th>Система</th>
             <th>Лицензия ОС</th>
             <th>Офис</th>
             <th>Лицензия офиса</th>
+            <th>#</th>
         </tr>
         </thead>
         <tbody>
@@ -32,14 +34,17 @@
                 <td>{{$row->pom}}</td>
                 <td>{{$row->kab}}</td>
                 <td>{{$row->pc}}</td>
+                <td>{{$row->doctor}}</td>
                 <td>{{$row->ip}}</td>
                 <td>{{$row->mac}}</td>
                 <td>{{$row->os}}</td>
                 <td>{{$row->licos}}</td>
                 <td>{{$row->office}}</td>
                 <td>{{$row->licoffice}}</td>
+                <td><input type="button" class="fio btn btn-dark" value="+" data-id="{{$row->id}}"></td>
             </tr>
         @endforeach
         </tbody>
     </table>
 @endif
+
