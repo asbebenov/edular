@@ -19,7 +19,5 @@ class ContMisController extends Controller
               return view('page', ['docs' => $res, 'id'=>$id]);
           }
   }
-  public function deldata($id){
 
-  }
 }

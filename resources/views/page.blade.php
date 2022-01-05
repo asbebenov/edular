@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <table class="table table-bordered">
+    <table class="table table-bordered" id="doctab">
         <thead class="table-dark">
         <tr>
 
@@ -30,7 +30,7 @@
             </td>
             @if(\Illuminate\Support\Facades\Auth::check())
                 <td>
-                    <input type="button" class="btn-warning" value="-" name="delbutt" data-id="{{$doc->id}}">
+                    <input type="button" class="removebutton" value="-" name="delbutt" data-id="{{$doc->id}}">
                 </td>
             @endif
         </tr>

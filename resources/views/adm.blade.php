@@ -14,9 +14,10 @@
                 </th>
             </tr>
         </thead>
-
+        <tbody>
+        <tr>
             <td>
-                Please select volume
+                Пожалуйста, выберите раздел
             </td>
             <td>
                 <select id="sel_vol">
@@ -30,12 +31,26 @@
                     <option value="telemed">Телемедицина</option>
                 </select>
             </td>
+        </tr>
+        <tr>
+            <td>
+                Введите название документа:
+            </td>
             <td>
                 <input type="text" id="tdname" />
             </td>
-        <td>
-            <input type="file" id="uplfname" />
-        </td>
+        </tr>
+        <tr>
+            <td>
+                Выберите файл с документом:
+            </td>
+            <td>
+                <input type="file" id="uplfname" multiple>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"><input type="button" class="btn-success" value="Добавить" id="add_data_button"></td>
+        </tr>
         </tbody>
     </table>
 

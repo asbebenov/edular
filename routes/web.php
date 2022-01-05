@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('page/{id}',[App\Http\Controllers\ContMisController::class,'makedata']);
-Route::get('del/{id}',[App\Http\Controllers\ContMisController::class,'deldata']);
+Route::delete('delete_doc_row',[App\Http\Controllers\DelrowController::class,'deldata'])->middleware('auth');
 Route::get('/about', function (){
     return view('about');
 });
@@ -32,6 +32,7 @@ Route::get('/move',[App\Http\Controllers\TechMoveController::class,'techmove'])-
 Route::post('/ttable',[App\Http\Controllers\TechMoveController::class,'techtable'])->middleware('auth');
 Route::post('/allwork',[App\Http\Controllers\TechMoveController::class,'allwork'])->middleware('auth');
 Route::get('/adm',[App\Http\Controllers\AdmController::class,'admpage'])->middleware('auth');
+Route::post('/append',[App\Http\Controllers\AdmController::class,'app_data'])->middleware('auth');
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
