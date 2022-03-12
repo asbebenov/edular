@@ -22,18 +22,21 @@ class ListPcController extends Controller
         $krp=$request->get('krp');
         if(!empty($invnum)){
             $res=ListPc::where('inv',$invnum)->get();
-            return view("pctable",['tab'=>$res]);
+	    $cin=$res->count();
+            return view("pctable",['tab'=>$res, 'cin'=>$cin]);
         }
 
         if(!empty($ip)){
             $res=ListPc::where('ip',$ip)->get();
-            return view("pctable",['tab'=>$res]);
+	    $cin=$res->count();
+            return view("pctable",['tab'=>$res, 'cin'=>$cin]);
         }
 
         if(!empty($krp)){
-            $res=ListPc::where('korp',$krp)->get();
-            if($krp=='all') {$res=ListPc::all();}
-            return view("pctable",['tab'=>$res]);
+            $res=ListPc::where('korp',$krp)->orderBy('etaj')->orderBy('pom')->get();
+	    $cin=$res->count();
+            if($krp=='all') {$res=ListPc::all();$cin=$res->count();}
+            return view("pctable",['tab'=>$res, 'cin'=>$cin]);
         }
 
     }
@@ -63,15 +66,16 @@ class ListPcController extends Controller
 
         return view('listfreeip',['tab36'=>$list36,'tab37'=>$list37,'tab38'=>$list38,'tab39'=>$list39]);
     }
+
+    public function addfio(Request $req){
+        $id = $req->get('id');
+        $fio = $req->get('fio');
+        $model=ListPc::find($id);
+        $model->doctor=$fio;
+        $model->save();
+    }
+
 }
-/*
 
 
-        $list36=FreeIp::query()->select('free_ips.*')
-            ->leftJoin('list_pcs', function ($join) {
-                $join->on('free_ips.ip', '=', 'list_pcs.ip');
-            })->whereNull('list_pcs.ip')->where('free_ips.ip', 'like', '10.174.36.%')->get();
-
-
- * */
 
